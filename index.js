@@ -5,17 +5,19 @@ const uuid = require('./helpers/uuid');
 
 const app = express();
 
-
+// Middleware for parsing JSON and urlencoded form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
 //html routes
+// GET Route for notes page
 app.get('/notes', (req, res) => 
     // should return the notes.html file
     res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
+// GET Route for homepage
 app.get('*', (req, res) => 
     // should return the index.html file
     res.sendFile(path.join(__dirname, '/public/index.html'))
@@ -23,6 +25,7 @@ app.get('*', (req, res) =>
 
 
 //api routes
+// GET Route for reading and returning saved notes
 app.get('/api/notes', (req, res) => {
     // should read the db.json file and return all saved notes as JSON
     fs.readFile("/db/db.json","utf-8",(err,data)=>{
@@ -34,7 +37,7 @@ app.get('/api/notes', (req, res) => {
         }
     })
 })
-
+// POST Route for adding new notes
 app.post('/api/notes', (req, res) => {
     // should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
     fs.readFile('/db/db.json', 'utf-8', (err, data) => {
