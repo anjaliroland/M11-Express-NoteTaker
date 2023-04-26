@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const uuid = require('uuid');
 
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Middleware for parsing JSON and urlencoded form data
@@ -79,6 +80,6 @@ app.delete('/api/notes/:id', (req, res) => {
 })
 
 
-app.listen(3001, () =>
-  console.log(`App listening at http://localhost:3001 🚀`)
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
