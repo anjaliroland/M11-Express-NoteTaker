@@ -77,8 +77,7 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 Please refer to the LICENSE in the repo.
 
-<!--
+
 ## 🔗 Links
 
-Deployed Application:
--->
+Deployed Application: https://note-taker1127.herokuapp.com/
