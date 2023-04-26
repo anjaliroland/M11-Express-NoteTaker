@@ -28,7 +28,7 @@ app.get('*', (req, res) =>
 // GET Route for reading and returning saved notes
 app.get('/api/notes', (req, res) => {
     // should read the db.json file and return all saved notes as JSON
-    fs.readFile("/db/db.json","utf-8",(err,data)=>{
+    fs.readFile("./db/db.json","utf-8",(err,data)=>{
         if(err){
             return res.status(500).json({msg:"error reading db"})
         } else {
@@ -40,7 +40,7 @@ app.get('/api/notes', (req, res) => {
 // POST Route for adding new notes
 app.post('/api/notes', (req, res) => {
     // should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
-    fs.readFile('/db/db.json', 'utf-8', (err, data) => {
+    fs.readFile('./db/db.json', 'utf-8', (err, data) => {
         if (err) {
             return res.status(500).json({msg: 'error reading db'})
         } else {
@@ -52,7 +52,7 @@ app.post('/api/notes', (req, res) => {
             }
             console.log(newNote);
             dataArr.push(newNote);
-            fs.writeFile('/db/db.json', JSON.stringify(dataArr, null, 4), (err) => {
+            fs.writeFile('./db/db.json', JSON.stringify(dataArr, null, 4), (err) => {
                 if (err) {
                     return res.status(500).json({msg: 'error writing db'})
                 } else {
