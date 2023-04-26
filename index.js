@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const uuid = require('./helpers/uuid');
 
-const app = express;
+const app = express();
 
 
 app.use(express.urlencoded({ extended: true }));
