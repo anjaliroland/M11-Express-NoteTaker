@@ -1,26 +1,22 @@
-# Note Taker
+# Note Taker 📝
 
-<!--
 ## Table of Contents
 
-- [Description](#description)
-    - [User Story](#user-story)
-    - [Acceptance Criteria](#acceptance-criteria)
-- [Technologies Used](#technologies-used)
-- [Usage](#usage)
-- [License](#license)
+- [Description](#📚-description)
+    - [User Story](#👤-user-story)
+    - [Acceptance Criteria](#☑️-acceptance-criteria)
+- [Technologies Used](#🛠️-technologies-used)
+- [Usage](#💻-usage)
+    - [Screenshots](#📸-screenshot)
+- [License](#📃-license)
+- [Links](#🔗-links)
 
-## Description
+## 📚 Description 
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+For this challenge we were tasked with adding the back end code for an application that can be used to write and save notes. We were given starter code that included completed front end code, it was then our job to use an Express.js back end to save and retrieve note data from a JSON file. After building the back end we needed to connect the two and then deploy the application to Heroku.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
--->
 
-### User Story
+### 👤 User Story
 
 ```md
 AS A small business owner
@@ -28,7 +24,7 @@ I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ```
 
-### Acceptance Criteria
+### ☑️ Acceptance Criteria
 
 ```md
 GIVEN a note-taking application
@@ -46,25 +42,43 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
 
-<!--
-## Technologies Used
+## 🛠️ Technologies Used
 
 <ul>
 <li>HTML
 <li>CSS
 <li>JavaScript
-<li>
-<li>
+<li>Node 
+<li>Express
+<li>Heroku
+</ul>
 
-## Usage
--->
+
+## 💻 Usage
+
+**Step 1:** open the note taking app  
+**Step 2:** click get started  
+**Step 3:** create a note with a note title and note text in the right-hand column  
+**Step 4:** click on the save icon to save the note  
+**Step 5:** saved notes will appear in the left-hand column  
+**Step 6:** to expand any saved note click on it and it will display in the right-hand column  
+**Step 7:** to add a new note click the plus icon and repeat steps 3 - 5  
+
+***To Delete***  
+**Step 8:** to delete a saved note click the trash icon to the right of it  
+
+### 📸 Screenshots
+
+![screenshot of homepage](./public/assets/images/homepage.png)
+![screenshot of notes page](./public/assets/images/notespage.png)
 
 
-## License
+## 📃 License
 
 Please refer to the LICENSE in the repo.
 
 <!--
-## Links
+## 🔗 Links
 
+Deployed Application:
 -->
